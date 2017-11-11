@@ -23,15 +23,7 @@
 </div>
 
 
-<div class="form-group" >
-{!! Form::label('cliente','Cliente')!!}
-<select id="cliente" class="form-control" name="cliente">
 
-@foreach($cliente as $cli)
-<option value="{{$cli['id']}}">{{$cli['nombre']}} </option>
-@endforeach
-</select>
-</div>
 
 
 

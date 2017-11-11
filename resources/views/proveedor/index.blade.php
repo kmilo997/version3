@@ -10,7 +10,7 @@
                         <a href="{{route('pedidoAdmin.index')}}"><i class="fa fa-desktop"></i> Pedidos</a>
                     </li>
           <li>
-                        <a href="{{route('cliente.index')}}"><i class="fa fa-bar-chart-o"></i> Clientes</a>
+                        <a href="/admin/users"><i class="fa fa-bar-chart-o"></i> Clientes</a>
                     </li>
                     <li>
                         <a  href="{{route('venta.index')}}"><i class="fa fa-qrcode"></i> Ventas</a>
@@ -74,7 +74,7 @@
 </div>
 	<td></font>
    
-	<a href="{{ route('proveedor.show',$pv->id)}}" class="btn btn-info  button small btn-block pull-rigth"><i class="fa fa-binoculars fa-2x fa-fw" aria-hidden="true"></i>&nbsp; Ver</a>
+	<a href="{{ route('proveedor.show',$pv->id)}}" class="btn btn-info  button small btn-block pull-rigth"><i class="fa fa-eye fa-2x fa-fw" aria-hidden="true"></i>&nbsp; Ver</a>
 	 
     </td>
 

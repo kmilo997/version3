@@ -3,9 +3,33 @@
 @section('heading', 'Create User')
 
 @section('content')
+
+
+<div id="page-inner">
+     <div class="row">
+                <div class="col-md-12">
+                   <div class="panel panel-default">
+                        <div class="panel-heading">
+
+      <h3 class="agile_heading">Clientes</h3>
+      <p>Aca prodremos agragar, eliminar, consultar y borr clientes</p>
+     
+    </div>
+  </div>
+
+
+
+ </div>
+
+
+					
+							</div>
+                            <a class="btn btn-block btn-success" href="{{ route('entrust-gui::users.index') }}"><span class="btn-label"><i class="fa fa-reply "></i></span>Listado</a>
+
+
 <form action="{{ route('entrust-gui::users.store') }}" method="post" role="form">
     @include('entrust-gui::users.partials.form')
-    <button type="submit" id="create" class="btn btn-labeled btn-primary"><span class="btn-label"><i class="fa fa-plus"></i></span>{{ trans('entrust-gui::button.create') }}</button>
-    <a class="btn btn-labeled btn-default" href="{{ route('entrust-gui::users.index') }}"><span class="btn-label"><i class="fa fa-chevron-left"></i></span>{{ trans('entrust-gui::button.cancel') }}</a>
+    <button type="submit" id="create" class="btn btn-success btn-block btn-primary"><span class="btn-label"><i class=" fa fa-save "></i></span>Guardar</button>
+   
 </form>
 @endsection

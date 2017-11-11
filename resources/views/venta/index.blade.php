@@ -77,7 +77,7 @@
 </div>
 	<td></font>
    
-	<a href="{{ route('venta.show',$v->id)}}" class="btn btn-info  button small btn-block pull-rigth"><i class="fa fa-binoculars fa-2x fa-fw" aria-hidden="true"></i>&nbsp; Ver</a>
+	<a href="{{ route('venta.show',$v->id)}}" class="btn btn-info  button small btn-block pull-rigth"><i class="fa fa-eye fa-2x fa-fw" aria-hidden="true"></i>&nbsp; Ver</a>
 	 
     </td>
 

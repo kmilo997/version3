@@ -37,14 +37,12 @@
 
 						<!-- Content -->
 		
-							<div class="wrapper">
-								<div class="inner">
-
-									
-										
-										<div class="table-wrapper">
-											    <table>
-											 	<thead>
+						
+						<div class="panel-body">
+						<div class="table-responsive">
+								
+										   <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+											<thead>
 													<tr>
 													<th><h2><font color="green">ID </font></h2></th>
 														<th><h2><font color="green">&nbsp;Cliente </font></h2></th>

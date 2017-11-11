@@ -13,15 +13,19 @@ body {
 }
 
  #wrapper {
+    
     width: 100%;
-    background:#09192A;
+background:#09192A;
 
 }
+
+#c { height: 60px; }
 
 #page-wrapper {
     padding: 15px 15px;
     min-height: 600px;
     background:#E5EBF2;
+    max-height: 300px;
    
 }
 #page-inner {
@@ -29,7 +33,7 @@ body {
     margin:10px 20px 10px 0px;
     background-color:transparent;
     padding:10px;
-    min-height:400px;
+    min-height:100px;
     
 }
 
@@ -72,6 +76,7 @@ border-bottom: 1px solid #C7D1DD;
 }
 .panel-back {
     background-color:#fff;
+    
 
 }
 .panel-default > .panel-heading {
@@ -369,7 +374,7 @@ border:0px solid black;
      
 }
 .navbar-header {
-    background: #09192A;
+    background: #01B52A;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 background-color: #B40101;

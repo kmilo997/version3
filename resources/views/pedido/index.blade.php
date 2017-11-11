@@ -61,7 +61,7 @@
 
 	<td></font>
    
-	<a href="{{ route('pedido.show',$v->id)}}" class="btn btn-info  button small btn-block pull-rigth"><i class="fa fa-binoculars fa-2x fa-fw" aria-hidden="true"></i>&nbsp; Ver</a>
+	<a href="{{ route('pedido.show',$v->id)}}" class="btn btn-info  button small btn-block pull-rigth"><i class="fa fa-eye fa-2x fa-fw" aria-hidden="true"></i>&nbsp; Ver</a>
 	 
     </td>
 
@@ -83,9 +83,9 @@
 	@if ($v->tipo === 0)
     <a href="#" class="btn btn-warning  button small disabled btn-block pull-rigth"><i class="	fa fa-clock-o fa-2x fa-fw" aria-hidden="true"></i>&nbsp;  Pendiente
 @elseif ($v->tipo === 1)
-    <a href="#" class="btn btn-success  button small btn-block pull-rigth"><i class="	fa fa-check fa-2x fa-fw" aria-hidden="true"></i>&nbsp;  Completado
+    <a href="#" class="btn btn-success  button small disabled btn-block pull-rigth"><i class="	fa fa-check fa-2x fa-fw" aria-hidden="true"></i>&nbsp;  Completado
 @elseif ($v->tipo === 2)
-    <a href="#" class="btn btn-danger  button small btn-block pull-rigth"><i class="	fa fa-remove fa-2x fa-fw" aria-hidden="true"></i>&nbsp;  Cancelado
+    <a href="#" class="btn btn-danger  button small disabled btn-block pull-rigth"><i class="	fa fa-times fa-2x fa-fw" aria-hidden="true"></i>&nbsp;  Cancelado
 @endif</a>
 	 
     </td>
@@ -101,6 +101,7 @@
 </tbody>
 </table>
 {!! $ped->render() !!}	
+<a href="{{ url('/limpiar')}}" class="btn btn-info  button small btn-block pull-rigth"><i class="fa fa-trash-o fa-2x fa-fw" aria-hidden="true"></i>&nbsp; Limpiar</a>
 	</div>
 						</div>
 						<a href="{{ url('/exportarPedidos')}}" class="btn btn-success button small  btn-lg pull-rigth" ><i class="fa fa-download" aria-hidden="true"></i>&nbsp; Exportar a Excel</a>	

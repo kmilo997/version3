@@ -55,16 +55,26 @@ $ped->save();
     
 }
 
-public function despa($id,$tipo){
+public function despachar($id,$tipo){
     $ped = Pedido::find($id);
-    $ped->tipo = $tipo;
+    $cantidad = $ped->unidades;
+    if($tipo == 1){
+        $a = $ped->producto;
+        $product = Product::find($a);
+        $product->minimo -= $cantidad;
+        $product->save();
+
+    }
+    
+    $ped->tipo = $tipo; 
     $ped->save();
-    return view('pedidoAdmin.show',compact('ped'));
+    return redirect()->route('pedidoAdmin.index');
     }
 
 public function edit($id){
     $ped = Pedido::find($id);
     $producto = Product::all();
+    $ped->tipo = 1;
      $cliente =Cliente::all();
         return view('pedidoAdmin.edit',compact('ped','producto','cliente'));
     }
@@ -74,7 +84,7 @@ public function show($id){
     $ped = Pedido::find($id);
         return view('pedidoAdmin.show',compact('ped'));
     }
-
+    
 
 
 public function update(PedidoRequest $request,$id){

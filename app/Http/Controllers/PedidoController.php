@@ -9,6 +9,9 @@ use App\Cliente;
 use App\Http\Requests;
 use App\Http\Requests\PedidoRequest;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 
 
 class PedidoController extends Controller
@@ -30,8 +33,20 @@ function eliminar() {
 
 
 
+
+public function limpiar(){
+  
+    DB::table('pedidos')->where('tipo', '!=', 0)->delete();
+    return redirect()->route('pedido.index');
+    }
+
+
+
+
   public function index(){
-        $ped=Pedido::orderBy('id','DESC')->paginate(4);
+    $a = Auth::user()->name;
+        $ped=Pedido::where('cliente',$a)->orderBy('id','DESC')->paginate(4);
+        
     	return view('pedido.index',compact('ped'));
     }
 
@@ -47,14 +62,11 @@ public function store(PedidoRequest $request){
     $id_producto = $request->producto;
     $unidades = $request->unidades;
 
-    $product = Product::find($id_producto);
-    $product->minimo -= $unidades;
-    $product->save();
 
 $ped->id = $request->id;
 $ped->fecha = $request->fecha;
 $ped->producto = $id_producto;
-$ped->cliente = $request->cliente;
+$ped->cliente = Auth::user()->name;;
 $ped->unidades = $unidades;
 $ped->total = $request->total;
 $ped->tipo = 0;
@@ -62,7 +74,7 @@ $ped->tipo = 0;
 $ped->save();
 
     return redirect()->route('pedido.index');
-    registar();
+   
   
     
 }

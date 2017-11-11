@@ -46,15 +46,12 @@
 					
 							</div>
 						<!-- Content -->
-						 
-							<div class="wrapper">
-								<div class="inner">
-
-									
-										
-										<div class="table-wrapper">
-										        <table>
-												<thead>
+						
+						<div class="panel-body">
+						<div class="table-responsive">
+								
+										   <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+											<thead>
 													    <tr>
 														<th><h2><font color="green"> ID </font></h2></th>
 														<th><h2><font color="green">&nbsp;&nbsp;Fecha Pedido</font></h2></th>
@@ -76,7 +73,7 @@
 
 	<td></font>
    
-	<a href="{{ route('pedidoAdmin.show',$v->id)}}" class="btn btn-info  button small btn-block pull-rigth"><i class="fa fa-binoculars fa-2x fa-fw" aria-hidden="true"></i>&nbsp; Despachar </a>
+	<a href="{{ route('pedidoAdmin.show',$v->id)}}" class="btn btn-info  button small btn-block pull-rigth"><i class="fa fa-eye fa-2x fa-fw" aria-hidden="true"></i>&nbsp; Despachar </a>
 	 
     </td>
 
@@ -96,7 +93,7 @@
 <td></font>
    
 	@if ($v->tipo === 0)
-    <a href="#" class="btn btn-warning  button small btn-block pull-rigth"><i class="	fa fa-clock-o fa-2x fa-fw" aria-hidden="true"></i>&nbsp;  Pendiente
+    <a href="#" class="btn btn-warning  button small disabled btn-block pull-rigth"><i class="	fa fa-clock-o fa-2x fa-fw" aria-hidden="true"></i>&nbsp;  Pendiente
 @elseif ($v->tipo === 1)
     <a href="#" class="btn btn-success  button small btn-block pull-rigth"><i class="	fa fa-check fa-2x fa-fw" aria-hidden="true"></i>&nbsp;  Completado
 @elseif ($v->tipo === 2)

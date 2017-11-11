@@ -34,8 +34,8 @@
                    <div class="panel panel-default">
                         <div class="panel-heading">
 
-      <h3 class="agile_heading">Pedidos</h3>
-      <p>Aca prodremos agragar, eliminar, consultar y borr Pedidos</p>
+      <h3 class="agile_heading">Clientes</h3>
+      <p>Aca prodremos agragar, eliminar, consultar y borr clientes</p>
      
     </div>
   </div>
@@ -49,15 +49,12 @@
 							</div>
 
 						<!-- Content -->
-						 
-							<div class="wrapper">
-								<div class="inner">
-
-									
-										
-										<div class="table-wrapper">
-										        <table>
-												<thead>
+					
+						<div class="panel-body">
+						<div class="table-responsive">
+								
+										   <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+											<thead>
 													    <tr>
 														<th><h2><font color="green"> NIT </font></h2></th>
 														<th><h2><font color="green">Nombre</font></h2></th>
@@ -77,7 +74,7 @@
 </div>
 	<td></font>
    
-	<a href="{{ route('cliente.show',$c->id)}}" class="btn btn-info  button small btn-block pull-rigth"><i class="fa fa-binoculars fa-2x fa-fw" aria-hidden="true"></i>&nbsp; Ver</a>
+	<a href="{{ route('cliente.show',$c->id)}}" class="btn btn-info  button small btn-block pull-rigth"><i class="fa fa-eye fa-2x fa-fw" aria-hidden="true"></i>&nbsp; Ver</a>
 	 
     </td>
 

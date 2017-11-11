@@ -63,12 +63,12 @@
 																<th><h2><font color="green">&nbsp;Tipo</font></h2></th>
 														
 </tr>
-<a href="{{ route('pedidoAdmin.index')}}" class="btn btn-success button small btn-block btn-lg pull-rigth" pull-rigth><i class="fa fa-reply fa-2x " aria-hidden="true"></i>&nbsp;  Listado</a>
+<a href="{{ route('pedidoAdmin.index')}}" class="btn btn-success button small btn-block btn-lg pull-rigth" pull-rigth><i class="fa fa-reply fa-2x " aria-hidden="true"></i>&nbsp;  Volver</a>
 
 								
 							
 									<div class="table-wrapper">
-<a href="{{ route('pedidoAdmin.edit', $ped->id)}}" class="btn btn-warning pull-rigth button small btn-block"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i>&nbsp; Despachar</a>
+
 														
 													
 												</thead>
@@ -103,11 +103,15 @@
 	
 	
 	</h4></td></h3>
-
+	{{$ped->id}}
 
 	</td>
 	</tr>
 	</table>
+
+	<a href="{{ route('despachar', ['id'=>$ped->id,'tipo'=>1])}}" class="btn btn-success pull-rigth button small btn-block"><i class="fa fa-check fa-2x" aria-hidden="true"></i>&nbsp; Despachar</a>
+	<a href="{{ route('despachar', ['id'=>$ped->id,'tipo'=>2])}}" class="btn btn-danger pull-rigth button small btn-block"><i class="fa fa-times fa-2x" aria-hidden="true"></i>&nbsp; Cancelar</a>
+
 	</tbody>
 	{!! $ped->body !!}
 	</div>
