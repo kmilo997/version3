@@ -3,39 +3,38 @@
 @section('titulo')
 
 
- <li>
-                        <a  class="active-menu"  href="{{route('products.index')}}"><i class="fa fa-dashboard"></i> Producto</a>
-                    </li>
-                    <li>
-                        <a href="{{route('pedidoAdmin.index')}}"><i class="fa fa-desktop"></i> Pedidos</a>
-                    </li>
-          <li>
-                        <a href="{{route('cliente.index')}}"><i class="fa fa-bar-chart-o"></i> Clientes</a>
-                    </li>
-                    <li>
-                        <a  href="{{route('venta.index')}}"><i class="fa fa-qrcode"></i> Ventas</a>
-                    </li>
-                    
-                    <li>
-                        <a href="{{route('proveedor.index')}}"><i class="fa fa-table"></i> Proveedores</a>
-                    </li>
-                    <li>
+            <li class="active"><a href="{{route('products.index')}}"><em class="fa fa-dropbox">&nbsp;</em> Productos</a></li>
+            <li><a href="{{route('venta.index')}}"><em class="fa fa-smile-o ">&nbsp;</em> Ventas</a></li>
+            <li><a href="{{route('pedidoAdmin.index')}}"><em class="fa fa-handshake-o">&nbsp;</em> Pedidos</a></li>
+            <li ><a href="{{route('proveedor.index')}}"><em class="fa fa-users">&nbsp;</em> Proveedores</a></li>
+            <li><a href="/admin/users"><em class="fa fa-users">&nbsp;</em> Clientes</a></li>
+<li>
+            <a href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                         document.getElementById('logout-form').submit();">
+                         <em class="fa fa-power-off">&nbsp;</em>
+                SALIR
+            </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
+            </li>
 
 @endsection
 
 
 @section('content')
 
-   <!-- <div class="banner_bottom_w3ls_agile"> menos espacio--> 
+   <!-- <div class="banner_bottom_w3ls_agile"> menos espacio-->
      <div id="page-inner">
      <div class="row">
-                <div class="col-md-12">
-                   <div class="panel panel-default">
-                        <div class="panel-heading">
 
-      <h3 class="agile_heading">Productos</h3>
-      <p>Aca prodremos agragar, eliminar, consultar y borr productos</p>
-     
+                   <div class="panel panel-default">
+
+
+
+
     </div>
   </div>
 
@@ -44,15 +43,17 @@
  </div>
 
 
-					
+
 							</div>
 
 						<!-- Content -->
-						
-									
+
+
 										 <div class="panel-body">
+                       @include('products.fragment.info')
+
                             <div class="table-responsive">
-									
+
 										       <table class="table table-striped table-bordered table-hover" id="dataTables-example">
 												<thead>
 
@@ -66,11 +67,11 @@
 
 
 
-														
+
 													</tr>
 												</thead>
-												
-													
+
+
 													<tbody>
 @foreach($products as $product)
 <tr><div text-align="center">
@@ -80,17 +81,17 @@
 	<h3><td><h4>&nbsp;&nbsp;{{ $product->nombre}}</h4></td></h3>
 </div>
 	<td></font>
-   
+
 	<a href="{{ route('products.show',$product->id)}}" class="btn btn-info  button small btn-block pull-rigth"><i class="fa fa-eye fa-2x fa-fw" aria-hidden="true"></i>&nbsp; Ver</a>
-	 
+
     </td>
 
 
 	<td>
 	<a class=" btn btn-warning button small btn-block pull-rigth" href="{{ route('products.edit',$product->id)}}"><i class="fa fa-pencil fa-2x fa-fw" aria-hidden="true"></i>&nbsp; Editar</a>
-    
-	
-    
+
+
+
 	</td>
 
 	<td>
@@ -100,8 +101,8 @@
 
 <button class="btn btn-danger button small  btn-block pull-rigth"><i class="fa fa-trash-o fa-2x fa-fw" aria-hidden="true"></i>&nbsp; Borrar</button>
 
-		
-	
+
+
 		</form>
 </td>
 
@@ -109,20 +110,20 @@
 @endforeach
 </tbody>
 </table>
-{!! $products->render() !!}	
+{!! $products->render() !!}
 	</div>
 						</div>
 						<br><br>
 
 
 
-<a href="{{ url('/exportarProductos')}}" class="btn btn-success button small  btn-lg pull-rigth" ><i class="fa fa-download" aria-hidden="true"></i>&nbsp; Exportar a Excel</a>	
-														
-														
+<a href="{{ url('/exportarProductos')}}" class=" btn btn-success button small  btn-lg pull-rigth" ><i class="fa fa-download" aria-hidden="true"></i>&nbsp; Exportar a Excel</a>
+
+
 						</div>
-						
+
 												</tbody>
-												
+
 											</table>
 										</div>
 
@@ -137,4 +138,3 @@
 </div>
 </div></div></div></div>
        @endsection
-

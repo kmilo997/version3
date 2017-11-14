@@ -3121,7 +3121,7 @@
 
 			#banner .logo .icon {
 				border-radius: 100%;
-				border: solid 2px rgba(255, 255, 255, 0.125);
+				border: solid 2px rgba(0,255,0,0.3);
 				cursor: default;
 				display: inline-block;
 				font-size: 2em;

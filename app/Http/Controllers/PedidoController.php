@@ -35,7 +35,7 @@ function eliminar() {
 
 
 public function limpiar(){
-  
+
     DB::table('pedidos')->where('tipo', '!=', 0)->delete();
     return redirect()->route('pedido.index');
     }
@@ -46,7 +46,7 @@ public function limpiar(){
   public function index(){
     $a = Auth::user()->name;
         $ped=Pedido::where('cliente',$a)->orderBy('id','DESC')->paginate(4);
-        
+
     	return view('pedido.index',compact('ped'));
     }
 
@@ -73,10 +73,10 @@ $ped->tipo = 0;
 
 $ped->save();
 
-    return redirect()->route('pedido.index');
-   
-  
-    
+    return redirect()->route('pedido.index')->with('info',"Se registrado correctamente");;
+
+
+
 }
 
 
@@ -108,9 +108,9 @@ $ped->tipo = $request->tipo;
 $ped->save();
 
 
-    return redirect()->route('pedido.index');
-    
-    
+    return redirect()->route('pedido.index')->with('info',"Se ha actualizado correctamente");;
+
+
 }
 
 
@@ -120,9 +120,9 @@ $ped->save();
     public function destroy($id){
         $ped = Pedido::find($id);
         $ped->delete();
-        
-    	 return redirect()->route('pedido.index');
-         
+
+    	 return redirect()->route('pedido.index')->with('info',"Se eliminado correctamente");;
+
     }
 
 
@@ -130,4 +130,3 @@ $ped->save();
 
 
 }
-

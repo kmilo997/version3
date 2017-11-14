@@ -50,10 +50,10 @@ $prov->Correo = $request->Correo;
 $prov->save();
 
 
-    return redirect()->route('proveedor.index');
+    return redirect()->route('proveedor.index')->with('info',"Se ha registrado correctamnte el proveedor");;
     registar();
-  
-    
+
+
 }
 
 
@@ -84,9 +84,9 @@ $prov->Correo = $request->Correo;
 $prov->save();
 
 
-    return redirect()->route('proveedor.index');
-    
-    
+    return redirect()->route('proveedor.index')->with('info',"Se actualizado correctamente");;
+
+
 }
 
 
@@ -96,9 +96,9 @@ $prov->save();
     public function destroy($id){
         $prov = Proveedor::find($id);
         $prov->delete();
-        
-    	 return redirect()->route('proveedor.index');
-         
+
+    	 return redirect()->route('proveedor.index')->with('info',"Se eliminado correctamente");;
+
     }
 
 

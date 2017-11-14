@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -179,6 +179,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Acoustep\EntrustGui\EntrustGuiServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
     ],
 

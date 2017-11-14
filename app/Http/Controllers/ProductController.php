@@ -33,8 +33,8 @@ $product->fecha_vencimiento = $request->fecha_vencimiento;
 $product->save();
 
 
-    return redirect()->route('products.index')->with('info','El producto fue guardado');
-    
+    return redirect()->route('products.index')->with('info',"Se ha registrado correctamente");
+
 }
 
 
@@ -65,8 +65,8 @@ $product->save();
 
 
     return redirect()->route('products.index')->with('info','El producto fue actualizado');
-    
-    
+
+
 }
 
 

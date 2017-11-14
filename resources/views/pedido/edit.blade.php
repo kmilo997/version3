@@ -2,14 +2,21 @@
 
 @section('titulo')
 
+ <li ><a href="#"><em class="fa fa-smile-o ">&nbsp;</em> Cotizacion</a></li>
+            <li class="active"><a href="{{route('pedido.index')}}"><em class="fa fa-handshake-o">&nbsp;</em> Pedidos</a></li>
+            <li>
+                        <a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();">
+                                     <em class="fa fa-power-off">&nbsp;</em>
+                            SALIR
+                        </a>
 
- 
-                        <a class="active-menu"  href="{{route('pedidoAdmin.index')}}"><i class="fa fa-desktop"></i> Pedidos</a>
-                    </li>
-          <li>
-                        <a  href="{{route('cliente.index')}}"><i class="fa fa-bar-chart-o"></i> Cotizacion</a>
-                    </li>
-                   
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                        </li>
+
 
 @endsection
 
@@ -25,7 +32,7 @@
 
       <h3 class="agile_heading">Pedidos</h3>
       <p>Aca prodremos agragar, eliminar, consultar y borr Pedidos</p>
-     
+
     </div>
   </div>
 
@@ -34,19 +41,19 @@
  </div>
 
 
-					
+
 							</div>
-					
+
 <!-- Content -->
 			 <div class="panel-body">
 
-							
-								
+
+
 
 <a href="{{ route('pedido.index')}}" class="btn btn-success button small btn-block btn-lg pull-rigth" pull-rigth><i class="fa fa-reply fa-2x" aria-hidden="true"></i>&nbsp;  Listado</a>
 
 
-	
+
 
 
 @include('pedido.fragment.error')
@@ -77,14 +84,9 @@
 </div>
 
     <!-- Footer -->
-       
+
     <!-- /Footer -->
 
     <!-- Copyright -->
-      
+
       @stop
-
-
-
-
-

@@ -61,10 +61,10 @@ $vent->unidades = $unidades;
 $vent->total = $request->total;
 $vent->save();
 
-    return redirect()->route('venta.index');
+    return redirect()->route('venta.index')->with('info',"Se ha registrado correctamente la venta");
     registar();
-  
-    
+
+
 }
 
 
@@ -95,9 +95,9 @@ $vent->total = $request->total;
 $vent->save();
 
 
-    return redirect()->route('venta.index');
-    
-    
+    return redirect()->route('venta.index')->with('info',"Se actualizado correctamente");;
+
+
 }
 
 
@@ -107,9 +107,9 @@ $vent->save();
     public function destroy($id){
         $vent = Venta::find($id);
         $vent->delete();
-        
-    	 return redirect()->route('venta.index');
-         
+
+    	 return redirect()->route('venta.index')->with('info',"Se eliminado correctamente");
+
     }
 
 
@@ -117,4 +117,3 @@ $vent->save();
 
 
 }
-

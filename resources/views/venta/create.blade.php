@@ -3,23 +3,24 @@
 @section('titulo')
 
 
- <li>
-                        <a  href="{{route('products.index')}}"><i class="fa fa-dashboard"></i> Producto</a>
-                    </li>
-                    <li>
-                        <a href="{{route('pedidoAdmin.index')}}"><i class="fa fa-desktop"></i> Pedidos</a>
-                    </li>
-          <li>
-                        <a href="{{route('cliente.index')}}"><i class="fa fa-bar-chart-o"></i> Clientes</a>
-                    </li>
-                    <li>
-                        <a class="active-menu" href="{{route('venta.index')}}"><i class="fa fa-qrcode"></i> Ventas</a>
-                    </li>
-                    
-                    <li>
-                        <a href="{{route('proveedor.index')}}"><i class="fa fa-table"></i> Proveedores</a>
-                    </li>
-                    <li>
+            <li ><a href="{{route('products.index')}}"><em class="fa fa-dropbox">&nbsp;</em> Productos</a></li>
+            <li class="active"><a href="{{route('venta.index')}}"><em class="fa fa-smile-o ">&nbsp;</em> Ventas</a></li>
+            <li><a href="{{route('pedidoAdmin.index')}}"><em class="fa fa-handshake-o">&nbsp;</em> Pedidos</a></li>
+            <li ><a href="{{route('proveedor.index')}}"><em class="fa fa-users">&nbsp;</em> Proveedores</a></li>
+            <li><a href="{{route('products.index')}}"><em class="fa fa-users">&nbsp;</em> Clientes</a></li>
+
+            <li>
+                        <a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();">
+                                     <em class="fa fa-power-off">&nbsp;</em>
+                            SALIR
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                        </li>
 
 @endsection
 
@@ -35,7 +36,7 @@
 
       <h3 class="agile_heading">Venta</h3>
       <p>Aca prodremos agragar, eliminar, consultar y borr Venta</p>
-     
+
     </div>
   </div>
 
@@ -44,27 +45,27 @@
  </div>
 
 
-					
+
 							</div>
 						<!-- Content -->
 
 
 
 <div class="panel-body">
-							
-								
+
+
 
 <a href="{{ route('venta.index')}}" class="btn btn-success button small btn-block btn-lg pull-rigth" pull-rigth><i class="fa fa-reply fa-2x" aria-hidden="true"></i>&nbsp;  Listado</a>
 
 
 
-								
-							
 
-						
-				
-									
-									
+
+
+
+
+
+
 
 
 
@@ -130,14 +131,8 @@ $("#total").val(precio*unidades);
 <!-- /Main -->
 
     <!-- Footer -->
-       
+
     <!-- /Footer -->
 
     <!-- Copyright -->
     @endsection
-       
-
-
-
-
-
