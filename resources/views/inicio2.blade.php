@@ -2,7 +2,7 @@
 <META HTTP-EQUIV="REFRESH" CONTENT="0;{{ route('login')}}">
   @endif
 
-
+@role('cliente')
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,3 +74,4 @@
 
 </body>
 </html>
+@endrole

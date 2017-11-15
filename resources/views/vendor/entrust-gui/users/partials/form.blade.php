@@ -9,6 +9,19 @@
     <label for="name">Nombre</label>
     <input type="name" class="form-control" id="name" placeholder="Nombre" name="name" value="{{ (Session::has('errors')) ? old('name', '') : $user->name }}">
 </div>
+
+<div class="form-group">
+    <label for="direccion">Direccion</label>
+    <input type="direccion" class="form-control" id="direccion" placeholder="Direccion" name="direccion" value="{{ (Session::has('errors')) ? old('direccion', '') : $user->direccion }}">
+</div>
+
+<div class="form-group">
+    <label for="telefono">Telefono</label>
+    <input type="telefono" class="form-control" id="telefono" placeholder="Telefono" name="telefono" value="{{ (Session::has('errors')) ? old('telefono', '') : $user->telefono }}">
+</div>
+
+
+
 <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
     <label for="email">Email </label>
     <input type="email" class="form-control" id="email" placeholder="Email" name="email" value="{{ (Session::has('errors')) ? old('email', '') : $user->email }}">
@@ -32,8 +45,8 @@
 <div class="form-group">
     <label for="roles">Roles</label>
     <select name="roles[]" id="roles" multiple class="form-control">
-        @foreach($roles as $index => $role)
-            <option value="{{ $index }}" {{ ((in_array($index, old('roles', []))) || ( ! Session::has('errors') && $user->roles->contains('id', $index))) ? 'selected' : '' }}>{{ $role }}</option>
-        @endforeach
+       
+            <option selected="" value="2" >Cliente</option>
+       
     </select>
 </div>

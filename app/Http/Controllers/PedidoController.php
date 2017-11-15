@@ -66,7 +66,7 @@ public function store(PedidoRequest $request){
 $ped->id = $request->id;
 $ped->fecha = $request->fecha;
 $ped->producto = $id_producto;
-$ped->cliente = Auth::user()->name;;
+$ped->cliente = Auth::user()->name;
 $ped->unidades = $unidades;
 $ped->total = $request->total;
 $ped->tipo = 0;

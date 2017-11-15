@@ -27,7 +27,7 @@ class VentaRequest extends FormRequest
           'id' => 'required',
             'fecha' => 'required',
             'producto' => 'required',
-            'cliente' => 'required',
+            //'cliente' => 'required',
              'unidades' => 'required',
               'total' => 'required'
             

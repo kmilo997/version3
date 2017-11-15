@@ -32,10 +32,7 @@
      <div class="row">
                 <div class="col-md-12">
                    <div class="panel panel-default">
-                        <div class="panel-heading">
-
-      <h3 class="agile_heading">Proveedores</h3>
-      <p>Aca prodremos agragar, eliminar, consultar y borr Proveedores</p>
+                      
 
     </div>
   </div>

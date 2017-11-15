@@ -16,6 +16,7 @@
 <div class="form-group" >
 {!! Form::label('producto','Producto')!!}
 <select id="producto" class="form-control" name="producto" >
+<option disabled="true" selected>Nombre -:- Precio -:- Cantidad</option>
 @foreach($producto as $product)
 <option value="{{$product['id']}}">{{$product['nombre']}} -:- {{$product['precio_venta']}} -:- {{$product['minimo']}}</option>
 @endforeach
@@ -25,7 +26,9 @@
 
 <div class="form-group" >
 {!! Form::label('cliente','Cliente')!!}
+
 <select id="cliente" class="form-control" name="cliente">
+<option disabled="true" selected>Nombre Cliente</option>
 
 @foreach($cliente as $cli)
 <option value="{{$cli['id']}}">{{$cli['nombre']}} </option>

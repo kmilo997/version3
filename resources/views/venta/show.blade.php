@@ -31,10 +31,7 @@
      <div class="row">
                 <div class="col-md-12">
                    <div class="panel panel-default">
-                        <div class="panel-heading">
-
-      <h3 class="agile_heading">venta</h3>
-      <p>Aca prodremos agragar, eliminar, consultar y borr venta</p>
+                        
 
     </div>
   </div>
@@ -56,8 +53,11 @@
 												<thead>
 													<tr>
 													<th><h2><font color="green">ID </font></h2></th>
-														<th><h2><font color="green">&nbsp;Producto </font></h2></th>
-														<th><h2><font color="green">&nbsp;Cantidad</font></h2></th>
+														<th><h2><font color="green">&nbsp;Cliente </font></h2></th>
+														<th><h2><font color="green">&nbsp;Producto</font></h2></th>
+														<th><h2><font color="green">&nbsp;Unidades</font></h2></th>
+														<th><h2><font color="green">&nbsp;Fecha</font></h2></th>
+														<th><h2><font color="green">&nbsp;Total</font></h2></th>
 
 </tr>
 <a href="{{ route('venta.index')}}" class="btn btn-success button small btn-block btn-lg pull-rigth" pull-rigth><i class="fa fa-reply fa-2x " aria-hidden="true"></i>&nbsp;  Listado</a>

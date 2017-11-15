@@ -1,3 +1,7 @@
+@if (Auth::guest())
+<META HTTP-EQUIV="REFRESH" CONTENT="0;{{ route('login')}}">
+  @endif
+
 @role('cliente')
 
 <!DOCTYPE html>

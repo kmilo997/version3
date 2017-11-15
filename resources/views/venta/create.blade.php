@@ -32,11 +32,7 @@
      <div class="row">
                 <div class="col-md-12">
                    <div class="panel panel-default">
-                        <div class="panel-heading">
-
-      <h3 class="agile_heading">Venta</h3>
-      <p>Aca prodremos agragar, eliminar, consultar y borr Venta</p>
-
+                        
     </div>
   </div>
 

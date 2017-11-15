@@ -31,10 +31,7 @@
      <div class="row">
                 <div class="col-md-12">
                    <div class="panel panel-default">
-                        <div class="panel-heading">
-
-      <h3 class="agile_heading">Pedidos</h3>
-      <p>Aca prodremos agragar, eliminar, consultar y borr Pedidos</p>
+                      
 
     </div>
   </div>

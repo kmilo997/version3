@@ -47,7 +47,8 @@
 
 							</div>
 						<!-- Content -->
-
+ <div class="panel-body">
+                           
 
 
 
