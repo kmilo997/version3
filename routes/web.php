@@ -43,11 +43,12 @@ Route::get('/exportarProveedores', 'ExcelController@exportarProveedores');
 
 Route::get('/limpiar', 'PedidoController@limpiar');
 
-Route::get('/en', function () {
-    return view('vendor/entrust-gui/users/index');
-});
+Route::resource('chart', 'ChartController');
 
 
-Route::get('inicio2', function () {
-    return view('inicio2');
+
+
+
+Route::get('/estadisticas', function () {
+    return view('estadisticas');
 });
