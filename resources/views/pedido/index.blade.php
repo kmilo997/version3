@@ -4,6 +4,7 @@
 
  <li ><a href="#"><em class="fa fa-smile-o ">&nbsp;</em> Cotizacion</a></li>
             <li class="active"><a href="{{route('pedido.index')}}"><em class="fa fa-handshake-o">&nbsp;</em> Pedidos</a></li>
+              <li><a href="/perfil2"><em class="fa fa-cog">&nbsp;</em> Perfil</a></li>
             <li>
                         <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
@@ -107,7 +108,7 @@
 <a href="{{ url('/limpiar')}}" class="btn btn-info  button small btn-block pull-rigth"><i class="fa fa-trash-o fa-2x fa-fw" aria-hidden="true"></i>&nbsp; Limpiar</a>
 	</div>
 						</div>
-						<a href="{{ url('/exportarPedidos')}}" class="btn btn-success button small  btn-lg pull-rigth" ><i class="fa fa-download" aria-hidden="true"></i>&nbsp; Exportar a Excel</a>
+						
 						</div>
 						</div>
 						<div class="clearfix"> </div>

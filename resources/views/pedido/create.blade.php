@@ -9,6 +9,7 @@
 
             <li ><a href="#"><em class="fa fa-smile-o ">&nbsp;</em> Cotizacion</a></li>
             <li class="active"><a href="{{route('pedido.index')}}"><em class="fa fa-handshake-o">&nbsp;</em> Pedidos</a></li>
+              <li><a href="/perfil"><em class="fa fa-cog">&nbsp;</em> Perfil</a></li>
             <li>
                         <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
@@ -107,10 +108,12 @@
 
 $( "#producto" ).change(function() {
 calcular();
+pro();
 });
 
 $( "#unidades" ).blur(function() {
 calcular();
+un();
 });
 
 function calcular(){
@@ -119,8 +122,17 @@ var nombre = producto[0];
 var precio = producto[1];
 var maximo = producto[2];
  var unidades = $("#unidades").val();
+  var producto = $("#producto").val();
+   var total = $("#total").val();
+   while(maximo==0){
+    alert("No hay unidades existentes ");
+    document.getElementById('producto').value = "0";
+    document.getElementById('unidades').value = "";
+    document.getElementById('total').value = "";
+    back();
+ }
  if(unidades == ""){
-alert("digite las unidades de "+nombre);
+alert("digite las unidades de "+nombre +" (Maxima cantidad: " + maximo +" )");
  //}else if(unidades > maximo || unidades < 1){
    }else if(unidades < 1){
    alert("digite minimo 1  y maximo "+maximo+" unidades de "+nombre);
@@ -128,6 +140,37 @@ alert("digite las unidades de "+nombre);
 $("#total").val(precio*unidades);
 }
 }
+
+function pro(){
+var producto = $("#producto option:selected").html().split(" -:- ");
+var nombre = producto[0];
+var precio = producto[1];
+var maximo = producto[2];
+ var unidades = $("#unidades").val();
+ if(maximo <= 0){
+alert("No hay unidades existentes ");
+
+}
+}
+
+function un(){
+var producto = $("#producto option:selected").html().split(" -:- ");
+var nombre = producto[0];
+var precio = producto[1];
+var maximo = producto[2];
+ var unidades = $("#unidades").val();
+
+ var total = $("#total").val();
+ if((unidades <= 0) || (unidades > maximo )){
+alert("Verifique la cantidad la cantidad ingresada y la cantidad diponible");
+document.getElementById('unidades').value = "";
+document.getElementById('total').value = "";
+
+
+}
+}
+
+
 </script>
 
 <!-- /Main -->

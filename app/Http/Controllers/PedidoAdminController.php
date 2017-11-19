@@ -59,6 +59,7 @@ public function despachar($id,$tipo){
     $ped = Pedido::find($id);
     $cantidad = $ped->unidades;
     if($tipo == 1){
+       
         $a = $ped->producto;
         $product = Product::find($a);
         $product->minimo -= $cantidad;

@@ -5,6 +5,7 @@
 
   <li ><a href="#"><em class="fa fa-smile-o ">&nbsp;</em> Cotizacion</a></li>
             <li class="active"><a href="{{route('pedido.index')}}"><em class="fa fa-handshake-o">&nbsp;</em> Pedidos</a></li>
+              <li><a href="/perfil2"><em class="fa fa-cog">&nbsp;</em> Perfil</a></li>
             <li>
                         <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
@@ -59,7 +60,7 @@
 </tr>
 <a href="{{ route('pedido.index')}}" class="btn btn-success button small btn-block btn-lg pull-rigth" pull-rigth><i class="fa fa-reply fa-2x " aria-hidden="true"></i>&nbsp;  Listado</a>
 
-								<br>	<br>	<br>	<br>
+								
 
 
 
@@ -82,13 +83,13 @@
 
 	<h3><td><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ $ped->total}}</h4></td></h3>
 
-	<h3><td><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<h3><td><h4>
 @if ($ped->tipo === 0)
-    Pendiente
+    <h4><font color="orange"><i class="fa fa-clock-o "></i>&nbsp;Pendiente</font></h4>
 @elseif ($ped->tipo === 1)
-    Completado
+    <h4><font color="green"><i class="fa fa-check"></i>&nbsp;Completado</font></h4>
 @elseif ($ped->tipo === 2)
-    Cancelado
+    <h4><font color="red"><i class="fa fa-times"></i>&nbsp;Cancelado</font></h4>
 @endif
 
 

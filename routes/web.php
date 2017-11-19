@@ -46,7 +46,12 @@ Route::get('/limpiar', 'PedidoController@limpiar');
 Route::resource('chart', 'ChartController');
 
 
-
+Route::get('/perfil', function () {
+    return view('perfil');
+});
+Route::get('/perfil2', function () {
+    return view('perfil2');
+});
 
 
 Route::get('/estadisticas', function () {

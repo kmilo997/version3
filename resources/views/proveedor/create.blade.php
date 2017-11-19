@@ -8,6 +8,7 @@
             <li><a href="{{route('pedidoAdmin.index')}}"><em class="fa fa-handshake-o">&nbsp;</em> Pedidos</a></li>
             <li class="active"><a href="{{route('proveedor.index')}}"><em class="fa fa-users">&nbsp;</em> Proveedores</a></li>
             <li><a href="/admin/users"><em class="fa fa-users">&nbsp;</em> Clientes</a></li>
+            <li><a href="perfil"><em class="fa fa-cog">&nbsp;</em> Perfil</a></li>
 
             <li>
                         <a href="{{ route('logout') }}"

@@ -105,7 +105,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span></button>
-                <a class="navbar-brand" href="#"><span>Lacteos</span>La palmera</a>
+                <a class="navbar-brand" href="{{route('products.index')}}"><span>Lacteos</span>La palmera</a>
 
             </div>
         </div><!-- /.container-fluid -->

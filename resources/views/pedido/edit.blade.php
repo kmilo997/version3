@@ -4,6 +4,7 @@
 
  <li ><a href="#"><em class="fa fa-smile-o ">&nbsp;</em> Cotizacion</a></li>
             <li class="active"><a href="{{route('pedido.index')}}"><em class="fa fa-handshake-o">&nbsp;</em> Pedidos</a></li>
+              <li><a href="/perfil"><em class="fa fa-cog">&nbsp;</em> Perfil</a></li>
             <li>
                         <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();

@@ -7,7 +7,7 @@
             <li><a href="{{route('pedidoAdmin.index')}}"><em class="fa fa-handshake-o">&nbsp;</em> Pedidos</a></li>
             <li ><a href="{{route('proveedor.index')}}"><em class="fa fa-users">&nbsp;</em> Proveedores</a></li>
             <li><a href="{{route('products.index')}}"><em class="fa fa-users">&nbsp;</em> Clientes</a></li>
-
+  <li><a href="perfil"><em class="fa fa-cog">&nbsp;</em> Perfil</a></li>
             <li>
                         <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
@@ -70,7 +70,7 @@
 	<h3><td><h4>{{ $v->id}}</h4></td></h3>
 	</div>
 	<div text-align="center">
-	<h3><td><h4>&nbsp;&nbsp;&nbsp;{{ $v->fecha}}</h4></td></h3>
+	<h3><td><h4>&nbsp;&nbsp;&nbsp;{{ $v->created_at}}</h4></td></h3>
 </div>
 	<td></font>
 
@@ -109,10 +109,11 @@
 {!! $vent->render() !!}
 	</div>
 						</div>
+						<a href="{{ url('/exportarVentas')}}" class=" btn btn-success button small  btn-lg pull-rigth" ><i class="fa fa-download" aria-hidden="true"></i>&nbsp; Exportar a Excel</a>
+
 						</div>
 						</div>
-						<div class="clearfix"> </div>
-												</tbody>
+																	</tbody>
 
 											</table>
 										</div>

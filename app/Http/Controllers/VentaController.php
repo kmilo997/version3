@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Venta;
 use App\Product;
 use App\Cliente;
+use App\User;
 use App\Http\Requests;
 use App\Http\Requests\VentaRequest;
 
@@ -41,7 +42,8 @@ function eliminar() {
     public function create(){
         $producto =Product::all();
         $cliente =Cliente::all();
-        return view(('venta.create'),compact('producto','cliente'));
+         $user =User::all();
+        return view(('venta.create'),compact('producto','cliente','user'));
     }
 
 public function store(VentaRequest $request){
