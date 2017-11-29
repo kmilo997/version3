@@ -12,9 +12,8 @@ class CreatePedidosTable extends Migration
      * @return void
      */
     public function up()
-    {
-        Schema::create('pedidos', function (Blueprint $table) {
-            $table->integer('id');
+    {Schema::create('pedidos', function (Blueprint $table) {
+            $table->increments('id');
              $table->date('fecha');
               $table->integer('producto');
               $table->string('cliente');

@@ -31,7 +31,7 @@
      <div class="row">
                 <div class="col-md-12">
                    <div class="panel panel-default">
-                        
+
 
     </div>
   </div>
@@ -78,6 +78,44 @@
 	<h3><td><h4>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;{{ $vent->cliente}}</h4></td></h3>
 	</div>
 	<div text-align="center">
+
+
+
+
+  <?php
+$mysqli = new mysqli("localhost", "root", "", "pro1");
+/* verificar la conexión */
+if (mysqli_connect_errno()) {
+    printf("Conexión fallida: %s\n", mysqli_connect_error());
+    exit();
+}
+
+$a=$vent->producto;
+
+if ($result = $mysqli->query("SELECT nombre FROM products Where id=$a ")) {
+    /* determinar el número de filas del resultado */
+  /*  $row_cnt = $result->get_result();
+
+    /* cerrar el resultset */
+    $result->close();
+}?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<h3><td><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ $vent->producto}}</h4></td></h3>
 
 	<h3><td><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ $vent->unidades}}</h4></td></h3>

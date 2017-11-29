@@ -24,14 +24,14 @@ class VentaRequest extends FormRequest
     public function rules()
     {
          return [
-          'id' => 'required',
+      
             'fecha' => 'required',
             'producto' => 'required',
             //'cliente' => 'required',
              'unidades' => 'required',
               'total' => 'required'
-            
-           
+
+
         ];
     }
 }

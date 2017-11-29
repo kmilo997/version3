@@ -43,7 +43,7 @@
 
 
 							</div>
-                            <a class="btn btn-block btn-success" href="{{ route('entrust-gui::users.index') }}"><span class="btn-label"><i class="fa fa-reply "></i></span>Listado</a>
+                        
 
 
 <form action="{{ route('entrust-gui::users.store') }}" method="post" role="form">

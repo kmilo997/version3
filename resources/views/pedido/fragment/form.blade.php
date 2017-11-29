@@ -1,11 +1,16 @@
+<div class="col-md-1"></div>
+
+<div class="col-md-10">
 
 
 
 
-<div class="form-group" >
-{!! Form::label('id','Codigo')!!}
-{!! Form::number('id',null,['class '=> 'form-control '])!!}
-</div>
+
+<a href="{{ route('pedido.index')}}" class="btn btn-success button small btn-block btn-lg pull-rigth" pull-rigth><i class="fa fa-reply fa-2x" aria-hidden="true"></i>&nbsp;  Listado</a><br>
+
+
+
+
 
 <div class="form-group" >
 {!! Form::label('fecha','Fecha')!!}
@@ -59,6 +64,8 @@
 
 <div>
 {!! Form::submit('Guardar',['class '=> ' form-group btn-block btn-lg btn btn-primary'])!!}
+</div>
+
 </div>
 
 <input type="reset" name="limpiar" value="Borrar datos del formulario" />

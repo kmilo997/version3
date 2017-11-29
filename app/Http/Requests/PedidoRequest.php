@@ -24,16 +24,16 @@ class PedidoRequest extends FormRequest
     public function rules()
     {
          return [
-          'id' => 'required',
+
             'fecha' => 'required',
             'producto' => 'required',
-            
+
              'unidades' => 'required',
               'total' => 'required',
-             
 
-            
-           
+
+
+
         ];
     }
 }

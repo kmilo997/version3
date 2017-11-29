@@ -1,8 +1,13 @@
+<div class="col-md-1"></div>
+
+<div class="col-md-10">
+
+    <a class="btn btn-success button small btn-block btn-lg pull-rigth" href="{{ route('entrust-gui::users.index') }}"><span class="btn-label"><i class="fa fa-reply "></i></span>Listado</a>
+    <br>
+
+
 
 <div class="form-group" >
-
-
-
 
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 <div class="form-group">
@@ -12,7 +17,7 @@
 
 <div class="form-group">
     <label for="direccion">Direccion</label>
-    <input type="direccion" class="form-control" id="direccion" placeholder="Direccion" name="direccion" value="{{ (Session::has('errors')) ? old('direccion', '') : $user->direccion }}">
+    <input type="direccion" class="form-control" id="direccion" placeholder="Direccion" value="{{ (Session::has('errors')) ? old('direccion', '') : $user->direccion }}" name="direccion" value="{{ (Session::has('errors')) ? old('direccion', '') : $user->direccion }}">
 </div>
 
 <div class="form-group">
@@ -45,8 +50,8 @@
 <div class="form-group">
     <label for="roles">Roles</label>
     <select name="roles[]" id="roles" multiple class="form-control">
-       
+
             <option selected="" value="2" >Cliente</option>
-       
+
     </select>
 </div>

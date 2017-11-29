@@ -56,23 +56,6 @@
 <div class="wrapper">
 
 
-
-
-<a href="{{ route('pedido.index')}}" class="btn btn-success button small btn-block btn-lg pull-rigth" pull-rigth><i class="fa fa-reply fa-2x" aria-hidden="true"></i>&nbsp;  Listado</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @include('pedido.fragment.error')
 
 

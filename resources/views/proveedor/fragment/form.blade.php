@@ -1,3 +1,12 @@
+<div class="col-md-1"></div>
+
+<div class="col-md-10">
+
+
+
+
+
+<a href="{{ route('proveedor.index')}}" class="btn btn-success button small btn-block btn-lg pull-rigth" pull-rigth><i class="fa fa-reply fa-2x" aria-hidden="true"></i>&nbsp;  Listado</a><br>
 
 
 
@@ -50,6 +59,6 @@
 
 {!! Form::submit('Guardar',['class '=> ' form-group btn-block btn-lg btn btn-primary'])!!}
 </div>
-
+</div>
 
 
